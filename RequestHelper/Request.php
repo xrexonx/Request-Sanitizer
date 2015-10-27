@@ -1,48 +1,96 @@
 <?php
 
-
-//rexon_10262015
+/**
+* Request Sanitizer
+* @description Request sanitizer is a class that clean request data before inserting into the database.
+* @author Rexon A. De los Reyes <rexondelosreyes88@gmail.com>
+* @date 10262015
+*/
 
 class Request {
 
     protected $data = [];
-    protected $input = [];
 
     public function __construct($requestData = null)
     {
         if (is_null($requestData)){
             $this->data = &$_REQUEST;
-        }else{
+        } else {
             $this->data = $requestData;
+        }
+        $this->_setProperties($this->data);
+    }
+
+    /**
+    * Set properties dynamically
+    * @param array $aRequest
+    * @return
+    */
+    private function _setProperties ($aRequest)
+    {
+        foreach ($aRequest as $key => $value) {
+            if (!property_exists($this, $key)) {
+                $this->$key = $this->_sanitize($value);
+            }
         }
     }
 
+    /**
+    * Set to array
+    * @param array $aRequest
+    * @return array
+    */
+    private function _toArray ($request)
+    {
+        return !is_array($request) ? [$request] : $request;
+    }
+
+    /**
+    * Set Request
+    * @param array $aRequest
+    * @return array
+    */
+    private function _setRequest($request = null)
+    {
+        $request = $request ? : $this->data;
+        return $this->_toArray($request);
+    }
+
+    /**
+    * Get array of request data
+    * @param array $aRequest
+    * @return array
+    */
     public function getArray ($arrData = [])
     {
         if (empty($arrData)){
             $arrData = $this->data;
         }
-
         return $this->_sanitize($arrData);
     }
 
-
+    /**
+    * Get Input form data
+    * @param string $inputName
+    * @return array
+    */
     public function getInput ($inputName)
     {
-        $aRequest = $this->_setRequest();
-
+        $aRequest  = $this->_setRequest();
         $returnVal = "";
         foreach ($aRequest as $key => $value) {
             if ($key === $inputName) {
                 $returnVal = $this->_sanitize($value);
             }
         }
-
         return $returnVal;
     }
 
-
-
+    /**
+    * Sanitize request data
+    * @param array $aRequest
+    * @return array
+    */
     private function _sanitize($request)
     {
         $aRequest = $this->_setRequest($request);
@@ -64,12 +112,6 @@ class Request {
         } else {
             return $aRequest;
         }
-    }
-
-    private function _setRequest($request = null)
-    {
-        $resquest = $request ? : $this->data;
-        return !is_array($resquest) ? [$resquest] : $resquest;
     }
 
 }
