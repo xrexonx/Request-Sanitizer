@@ -1,10 +1,14 @@
+# Request Sanitizer
+
+Request sanitizer is a helper class that clean ($_REQUEST, $_GET and $_POST) request data before inserting into the database.
+
+## Sample Usage
+
+
+```php
 <?php
-
 require_once 'Request.php';
-
 $request = new Request();
-
-//Sample Usage
 
 //Get request Array
 $aData = $request->getArray();
@@ -23,5 +27,8 @@ $aData = [
     'number' => $request->number
 ];
 
-//sample database insertion
-//User::create($aData);
+//sample method call for database insertion
+User::create($aData);
+```
+
+Thanks and enjoy!
