@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Request.php';
+require_once 'libs/Request.php';
 
 $request = new Request();
 
@@ -22,6 +22,9 @@ $aData = [
     'address' => $request->address,
     'number' => $request->number
 ];
+
+
+var_dump($aData);
 
 //sample database insertion
 //User::create($aData);
