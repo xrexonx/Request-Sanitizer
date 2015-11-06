@@ -3,5 +3,12 @@
     "description": "PHP Request Sanitizer.",
     "keywords": ["request", "sanitizer"],
     "license": "MIT",
-    "type": "helper"
+    "type": "library",
+    "authors": [
+    {
+      "name": "Rexon A. De los Reyes",
+      "email": "rexondelosreyes88@gmail.com",
+      "role": "developer"
+    }
+  ]
 }
