@@ -1,0 +1,7 @@
+{
+    "name": "request-sanitizer",
+    "description": "PHP Request Sanitizer.",
+    "keywords": ["request", "sanitizer"],
+    "license": "MIT",
+    "type": "helper"
+}
