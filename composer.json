@@ -1,5 +1,5 @@
 {
-    "name": "request-sanitizer",
+    "name": "rexon/request-sanitizer",
     "description": "PHP Request Sanitizer.",
     "keywords": ["request", "sanitizer"],
     "license": "MIT",
