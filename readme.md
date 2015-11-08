@@ -2,6 +2,23 @@
 
 Request sanitizer is a helper class that clean ($_REQUEST, $_GET and $_POST) request data before inserting into the database.
 
+## Installation
+
+add this on your *composer.json* file.
+```javascript
+{
+    "require": {
+        "rexon/request-sanitizer": "~1.0.0"
+    }
+}
+```
+Run composer update
+```sh
+$ composer update
+```
+or you can manually download the zip file [here] on github.
+ [here]: <https://github.com/xrexonx/Request-Sanitizer>
+
 ## Sample Usage
 
 
