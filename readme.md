@@ -4,6 +4,12 @@ Request sanitizer is a helper class that clean ($_REQUEST, $_GET and $_POST) req
 
 ## Installation
 
+```sh
+composer require rexon/request-sanitizer
+```
+
+or
+
 add this on your *composer.json* file.
 ```javascript
 {
