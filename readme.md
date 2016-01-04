@@ -10,7 +10,7 @@ composer require rexon/request-sanitizer
 or you can manually download the zip file [here] on github.
  [here]: <https://github.com/xrexonx/Request-Sanitizer>
 
-## Sample Usage
+##Usage
 
 
 ```php
