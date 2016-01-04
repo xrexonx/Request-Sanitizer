@@ -1,26 +1,11 @@
 # Request Sanitizer
 
-Request sanitizer is a helper class that clean ($_REQUEST, $_GET and $_POST) request data before inserting into the database.
+A very lightweight PHP helper class that clean / sanitize ($_REQUEST, $_GET and $_POST) request data before inserting into the database.
 
 ## Installation
 
 ```sh
 composer require rexon/request-sanitizer
-```
-
-or
-
-add this on your *composer.json* file.
-```javascript
-{
-    "require": {
-        "rexon/request-sanitizer": "~1.0.0"
-    }
-}
-```
-Run composer update
-```sh
-$ composer update
 ```
 or you can manually download the zip file [here] on github.
  [here]: <https://github.com/xrexonx/Request-Sanitizer>
@@ -52,6 +37,7 @@ $aData = [
 
 //sample method call for database insertion
 User::create($aData);
+
 ```
 
 Thanks and enjoy!
