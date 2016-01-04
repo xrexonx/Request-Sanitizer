@@ -12,10 +12,13 @@ or you can manually download the zip file [here] on github.
 
 ##Usage
 
-
 ```php
 <?php
+
+//Include
 require_once 'Request.php';
+
+//Initialize
 $request = new Request();
 
 //Get request Array
@@ -39,5 +42,8 @@ $aData = [
 User::create($aData);
 
 ```
+
+## License
+MIT © [Rexon A. De los Reyes](http://xrexonx.github.io)
 
 Thanks and enjoy!
