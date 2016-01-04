@@ -1,7 +1,7 @@
 {
     "name": "rexon/request-sanitizer",
     "description": "PHP Request Sanitizer.",
-    "keywords": ["request", "sanitizer"],
+    "keywords": ["php", "request", "sanitizer", "helper"],
     "license": "MIT",
     "type": "library",
     "authors": [
